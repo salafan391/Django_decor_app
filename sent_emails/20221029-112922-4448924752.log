@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: ama89999@gmail.com
+Date: Sat, 29 Oct 2022 11:29:22 -0000
+Message-ID: <166704296275.54393.9812764641175522941@Ahmeds-MacBook-Air.local>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MQ/be1zwy-037087e9d394aa5afbf1fedc4d62e317/
+
+Your username, in case you’ve forgotten: ahmedalwahaishi
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

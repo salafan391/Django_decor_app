@@ -1,0 +1,9 @@
+{% extends 'apps/panel.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h3>هل انت متاكد من حذف {{object.title}}</h3>
+        <button type="submit">حذف</button>
+    </form>
+{% endblock content %}
+    

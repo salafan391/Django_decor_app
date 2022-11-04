@@ -1,0 +1,79 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'apps/panel.css' %}">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+{% block css %}
+  
+{% endblock css %}
+</head>
+<body> 
+  {% if user.is_authenticated %}
+  <div class="user_auth">
+    
+    <img src="{% static 'apps/settings-512.png' %} " alt="">
+    <div class="log_out">
+    <p>{{ user.username }} اهلا!</p>
+    <p><a href="{% url 'logout' %}?next={{request.path}}">تسجيل الخروج</a></p>
+    <p><a href="{% url 'password_reset' %}">تغيير كلمة المرور</a></p>
+  </div>
+  {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}?next={{request.path}}">تسجيل الدخول</a>
+    {% endif %}
+    
+    
+  </div>
+  <ul>
+  <li>
+      <a href="{% url 'update_logo' pk=1 %}"><h4>اللوجو</h4></a>
+    </li>
+  <li>
+    <a href="{% url 'update_phone' pk=1 %}"><h4>رقم الجوال</h4></a>
+  </li>
+<li>
+  <a href="{% url 'about_form' %}"><h4>نبذة عنا</h4></a>
+</li>
+<li>
+  <a href="{% url 'photo_add' %}"><h4>اضافة صور جديدة</h4></a>
+</li>
+<li>
+  <a href="{% url 'offer_add' %}"><h4>اضافة عروض جديدة</h4></a>
+</li>
+<li>
+  <a href="{% url 'list_offer' %}"><h4>
+    قائمة التحكم بالاعلانات
+  </h4></a>
+</li>
+<li>
+  <a href="{% url 'photo_list' %}"><h4>
+    قائمة التحكم بالصور
+  </h4></a>
+</li>
+</ul>
+{% block content %}
+{% endblock content %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

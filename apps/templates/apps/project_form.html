@@ -1,0 +1,16 @@
+{% extends 'apps/panel.html' %}
+{% load static %}
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form_container">
+        {% for feild in form %}
+        <div class="form-control{% if field.errors %} errors {% endif %}">
+            <p>{{feild.label_tag}}</p>
+            <p>{{feild}}</p>
+        {% endfor %}
+    
+        <button type="submit">حفظ</button></div>
+    </form>
+{% endblock content %}
+    

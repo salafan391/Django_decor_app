@@ -1,0 +1,15 @@
+{% extends 'apps/panel.html' %}
+{% block content %}
+     <ul>
+        
+    {% for object in object_list%}
+    {% if not object %}
+        <p>no offers</p>
+        {% else %}
+       <li><a href="{% url 'delete_offer' object.pk %}"> حذف </a>{{object.title}}</li>
+       {% endif %}
+    {% endfor %}
+    
+</ul>
+{% endblock content %}
+   

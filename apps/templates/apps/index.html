@@ -1,0 +1,62 @@
+{% extends 'apps/header.html' %}
+{% load static %}
+{% block content %}
+   <div class="banner_section layout_padding">
+    <div class="container">
+       <div id="costum_slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            {% for offer in offers %}
+            {% if forloop.first %}
+               <div class="carousel-item active {% if  forloop.first %} active {% endif %}">
+                <h1 class="furniture_text">{{offer.title}}</h1>
+                <p class="there_text">{{offer.text}}</p>
+                <div class="contact_bt_main">
+                   <div class="contact_bt"><a href="{% url 'contact' %}">التواصل بنا</a></div>
+                </div>
+             </div>
+             {% else %}
+             <div class="carousel-item {% if  forloop.first %} active {% endif %}">
+               <h1 class="furniture_text">{{offer.title}}</h1>
+               <p class="there_text">{{offer.text}}</p>
+               <div class="contact_bt_main">
+                  <div class="contact_bt"><a href="{% url 'contact' %}">التواصل بنا</a></div>
+       </div>
+    </div>
+ </div>
+ {% endif %}
+{% endfor %}
+ <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
+<i class=""><img src="{% static '/apps/left-arrow.png' %} "></i>
+</a>
+<a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
+<i class=""><img src="{% static '/apps/right-arrow.png' %}" ></i>
+</a>
+ <!-- projects section start -->
+ <div class="projects_section layout_padding">
+      <h1 class="our_text">Our projects</h1>
+      <p class="ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="projects_section2">
+                  <div class="container_main2">
+                     <div class="row">
+                        {% for project in projects  %}
+                          {% include 'apps/includes/projects.html' %}
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+               
+         </div>
+         <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+         <i class="fa fa-angle-left"></i>
+         </a>
+         <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+         <i class="fa fa-angle-right"></i>
+         </a>
+      </div>
+{% endblock content %}

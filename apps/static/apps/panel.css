@@ -1,0 +1,82 @@
+.user_auth{
+ 
+    margin-top: 10px;
+    background-color: rgb(49, 49, 35);
+    padding-bottom: 60px;
+   
+}
+.log_out{
+    text-align: right;
+    margin-right: 20px;
+    color: white;
+    
+    
+}
+.log_out a{
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 6px;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: rgb(58, 46, 29);
+    box-shadow: 1px 1px rgb(164, 163, 163);
+    color: rgb(255, 255, 255);
+    transition: .50s;
+}
+.log_out:hover{
+    color: rgb(221, 247, 244);
+    
+}
+img{
+    width: 150px;
+    float: left;
+    background-color: aliceblue;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+h1{
+    text-align: center;
+    color: white;
+    margin: auto 10px;
+    display: inline;
+    float: right;
+}
+.logo{
+    width: 300px;
+    float: right;
+    border: 1px solid black;
+
+}   
+
+h4{
+    text-align: right;
+    text-decoration: none;
+}
+li{
+    padding: 20px;
+    background-color: blueviolet;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto 10px;
+    margin-top: 10px;
+    transition: .40s;
+}
+ul{
+    float: right;
+    list-style: none;
+    
+}
+li a{
+    text-decoration: none;
+    color:white;  
+}
+li a:hover{
+    color: white;
+}
+li:hover{
+    opacity: .50;
+}
+body{
+    background-color: rgb(215, 200, 230);
+}
+
